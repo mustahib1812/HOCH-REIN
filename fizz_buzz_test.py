@@ -21,11 +21,18 @@ for i in range(0, n_2):
 
 
 
-# If any of the list's lenght is shorter than the other one, append 1 in the shorter list
+# If any of the list's lenght is shorter than the other one, 
+# append 1 in the shorter list equal to the length of the bigger list
 if (len(lst_1) < len(lst_2)):
-    lst_1.append("1")
+    difference = len(lst_2) - len(lst_1)
+    for i in range(difference):
+        lst_1.append("1")
+
 elif(len(lst_2) < len(lst_1)):
-    lst_2.append("1")
+    difference = len(lst_1) - len(lst_2)
+    for i in range(difference):
+        lst_2.append("1")
+
 
 
 for i in lst_1:
